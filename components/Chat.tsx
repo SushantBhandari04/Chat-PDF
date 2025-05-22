@@ -40,7 +40,7 @@ export default function Chat({ id }: { id: string }) {
         bottomOfChatRef.current?.scrollIntoView({
             behavior: "smooth"
         })
-    })
+    },[messages])
 
     useEffect((() => {
         if (!snapshot) return;

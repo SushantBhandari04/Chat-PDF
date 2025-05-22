@@ -40,10 +40,10 @@ export async function askQuestion(id: string, question: string) {
     const reply = await generateLangchainCompletion(id, question);
 
     const aiMessage: Message = {
-        role: "ai",
-        message: reply,
-        createdAt: new Date()
-    }
+    role: "ai",
+    message: reply ?? "Sorry, I couldn't generate a response.",
+    createdAt: new Date()
+}
 
     await chatRef.add(aiMessage);
 

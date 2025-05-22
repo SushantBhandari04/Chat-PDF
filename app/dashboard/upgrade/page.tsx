@@ -24,8 +24,8 @@ export default function PricingPage() {
         if (!user) return;
 
         const userDetails: UserDetails = {
-            email: user.primaryEmailAddress?.toString()!,
-            name: user.fullName!
+            email: user.primaryEmailAddress?.toString() ?? "",
+            name: user.fullName ?? ""
         };
 
         startTransition(async () => {

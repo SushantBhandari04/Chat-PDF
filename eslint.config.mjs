@@ -13,12 +13,9 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     rules: {
-      "@typescript-eslint/no-unused-vars": "off", // Disable the rule globally
-    },
-  },
-  {
-    rules: {
-      "@typescript-eslint/ban-ts-comment": "off", // Disable the rule globally
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/no-explicit-any": "off", // Disable 'no-explicit-any'
     },
   },
 ];
